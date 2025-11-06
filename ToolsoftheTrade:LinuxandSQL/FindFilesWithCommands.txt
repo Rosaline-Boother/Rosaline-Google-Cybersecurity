@@ -1,0 +1,39 @@
+In this scenario, you have to locate and analyze the information of certain files located in the /home/analyst directory.
+Here’s how you’ll do this: First, you’ll get the information of the current working directory you’re in and display the contents of the directory. 
+Second, you’ll navigate to the reports directory and list the subdirectories it contains. 
+Third, you’ll navigate to the users subdirectory and display the contents of the Q1_added_users.txt file. 
+Finally, you’ll navigate to the logs directory and display the first 10 lines of a file it contains.
+
+1. Display your working directory. 
+- pwd
+output: /home/analyst
+
+2. Display the names of the files and directories in the current working directory. 
+- ls
+output: logs projects reports temp
+
+3. Navigate to the /home/analyst/reports directory.
+- cd /home/analyst/reports
+
+4. Display the files and subdirectories in the /home/analyst/reports directory.
+- ls
+output: users
+
+5. Navigate to the /home/analyst/reports/users directory.
+- cd users
+
+6. List the files in the current directory.
+- ls
+output: Q1_added_users.txt Q1_deleted_user.txt
+
+7. Display the contents of the Q1_added_users.txt file.
+- cat Q1_added_users.txt
+
+8. Navigate to the /home/analyst/logs directory.
+- cd /home/analyst/logs
+9. Display the name of the file it contains.
+- ls
+output: server_logs.txt
+10. Display the first 10 lines of this file.
+- head server_logs.txt
+
