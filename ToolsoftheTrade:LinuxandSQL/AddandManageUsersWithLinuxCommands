@@ -1,0 +1,29 @@
+In this scenario, a new employee with the username researcher9 joins an organization. You have to add them to the system and continue to manage their access during their time with the organization.
+
+Here’s how you’ll do this task: First, you’ll add a new employee to the system and then to their primary group. 
+Second, you’ll make this employee the owner of a file related to a particular project. 
+Third, you’ll add the new employee to a supplementary group. 
+Finally, you’ll delete the employee from the system.
+
+1. Write a command to add a user called researcher9 to the system.
+- sudo useradd researcher9
+2. Next, you need to add the new user to the research_team group.
+- sudo usermod -g research_team researcher9
+3. The new employee, researcher9, will take responsibility for project_r. In this task, you must make them the owner of the project_r.txt file.
+The project_r.txt file is located in the /home/researcher2/projects directory, and owned by the researcher2 user.
+
+Use the chown command to make researcher9 the owner of /home/researcher2/projects/project_r.txt.
+
+- sudo chown researcher9 /home/researcher2/projects/project_r.txt
+
+4. In this task, you must add researcher9 to a secondary group (sales_team). Their primary group is still research_team.
+
+Use the usermod command with the -a and -G options to add researcher9 to the sales_team group as a secondary group.
+
+- sudo usermod -a -G sales_team researcher9 
+
+5. Run a command to delete researcher9 from the system:
+- sudo userdel researcher9 
+Output: Userdel: Group researcher9 not removed because it is not the primary group of user researcher9.  
+
+- sudo groupdel researcher9 
