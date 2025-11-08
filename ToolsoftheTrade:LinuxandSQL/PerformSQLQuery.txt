@@ -1,0 +1,28 @@
+In this scenario, you have to determine which employee devices must be updated. You also need to investigate user login activity to explore if any unusual activity has occurred.
+
+The information you need is located in the machines and login_attempts tables in the organization database.
+
+Here’s how you’ll do this task: First, you’ll obtain information on the employee devices that must be updated. 
+Next, you’ll examine the login attempts for unusual activity. 
+Finally, you’ll use the ORDER BY keyword to sort the data returned by your SQL queries.
+In this task, you need to obtain information on employee devices because your team needs to update them. The information you need is in the machines table in the organization database.
+
+1. First, you need to retrieve all the information about the employee devices.
+- select * from machines; 
+2. Select only the device_id and email_client columns from the machines table. 
+- select device_id, email_client from machines; 
+3. Complete the query to return only the device_id, operating_system, and OS_patch_date columns from the machines table. 
+- select device_id, operating_system, OS_patch_date from machines; 
+
+4. Write a SQL query to select the event_id and country columns from the log_in_attempts table.
+- Select event_id, country from log_in_attempts;
+5. Write a SQL query that selects the username, login_date, and login_time columns from the log_in_attempts table.
+- select username, login_date, login_time from log_in_attempts;
+6. Write a SQL query that selects all columns from the log_in_attempts table, using a single symbol after the SELECT keyword.
+- select * from log_in_attempts;
+
+7. Order the log_in_attempts data by login_date
+- select * from log_in_attempts order by login_date;
+
+8. Modify the query from the previous step by adding the login time to the ORDER BY clause. 
+- select * from log_in_attempts order by login_date, login_time;
