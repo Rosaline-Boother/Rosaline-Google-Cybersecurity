@@ -1,0 +1,21 @@
+In this scenario, you’ll investigate a recent security incident that compromised some machines.
+
+You are responsible for getting the required information from the database for the investigation.
+
+Here’s how you’ll do this task: First, you’ll use an inner join to identify which employees are using which machines. 
+Second, you’ll use left and right joins to find machines that do not belong to any specific user and users who do not have any specific machine assigned to them. 
+Finally, you’ll use an inner join to list all login attempts made by all employees.
+1. Retrieve all records from the machines table. 
+- select * from machines; 
+
+2. Complete the query to perform an inner join between the machines and employees tables on the device_id column. 
+- select * from machines inner join employees on employees.device_id=machines.device_id;
+
+3. Run the following SQL query to connect the machines and employees tables through a left join. 
+- select * from machines left join employees on employees.device_id=machines.device_id;
+
+4. Run the following SQL query to connect the machines and employees tables through a right join.
+- select * from machines right join employees on employees.device_id=machines.device_id;
+
+5. Run the following SQL query to perform an inner join on the employees and log_in_attempts tables. 
+- select * from employees inner join log_in_attempts on employees.username=log_in_attempts.username;
