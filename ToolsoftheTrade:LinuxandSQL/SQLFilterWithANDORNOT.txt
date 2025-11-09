@@ -1,0 +1,32 @@
+In this scenario, you need to obtain specific information about employees, their machines, and the departments they belong to from the database.
+
+Your team needs data to investigate potential security issues and to update computers.
+
+You are responsible for filtering the required information from the database.
+
+Here’s how you’ll do this task: First, you’ll retrieve all failed login attempts after business hours. 
+Second, you’ll retrieve all login attempts that occurred on specific dates. 
+Third, you’ll retrieve logins that didn't originate in Mexico. Fourth, you’ll retrieve information about certain employees in the Marketing department. Fifth, you’ll retrieve information about employees in the Finance or the Sales department. 
+Finally, you’ll obtain information about employees who are not in the Information Technology department.
+
+1. The login_time column in the log_in_attempts table contains information on when login attempts were made. Office hours end at '18:00'.
+The success column in the log_in_attempts table contains values of TRUE or FALSE to indicate whether the login was successful. MySQL stores Boolean values as 1 for TRUE, and 0 for FALSE. This means that TRUE is represented as 1, and FALSE represented as 0 in the success column.
+Use the AND operator to retrieve the failed login attempts that occurred after business hours. 
+- select * from log_in_attempts where login_time>'18:00' and success = 0;
+
+2. Your team is investigating a suspicious event that occurred on '2022-05-09'. You want to retrieve all login attempts that occurred on this day and the day before ('2022-05-08').
+- SELECT * FROM log_in_attempts WHERE login_date = '2022-05-08' OR login_date = '2022-05-09';
+
+3. Run the following SQL query to retrieve login attempts that did not originate in Mexico. Note that the country field includes entries with 'MEX' and 'MEXICO'.
+- select * from log_in_attempts where not country like "MEX%";
+4. You can run the following SQL query if you need to view the columns and values in the employees table:
+- select * from employees; 
+
+5. Your team is updating employee machines, and you need to obtain the information about employees in the 'Marketing' department who are located in all offices in the East building (such as 'East-170' or 'East-320').
+- select * from employees where department = 'Marketing' And office like 'East%';
+
+6. Write a SQL query to retrieve records for employees in the 'Finance' or the 'Sales' department.
+- select * from employees where department = 'Finance' or department = 'Sales';
+
+7. Write a SQL query to retrieve records for employees who are not in the 'Information Technology' department.
+- select * from employees where not department = 'Information Technology';
