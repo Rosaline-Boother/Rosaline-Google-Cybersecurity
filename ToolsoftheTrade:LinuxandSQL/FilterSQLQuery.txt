@@ -1,0 +1,25 @@
+In this scenario, you need to get specific information about employees, their machines, and the departments they’re in. Your team needs this data to perform various tasks, such as running updates, posting a privacy notice in certain departments, and sending an alert to an employee with an issue on a machine.
+
+You are responsible for finding the required information by querying a database. You’ll add filters to your queries to locate the information more quickly.
+
+Here’s how you’ll do this task: First, you’ll list all organization machines and their operating systems. 
+Second, you’ll list all machines with the operating system OS 2. 
+Third, you’ll list all the employees in the Finance and Sales departments. 
+Fourth, you’ll obtain information about machines.
+1. Run a SQL query to retrieve only the device_id and operating_system columns from the machines table.
+- select device_id, operating_system from machines;
+
+2. Select all the records from the machines table with a value of 'OS 2' in the operating_system column. 
+- SELECT device_id, operating_system FROM machines WHERE operating_system = 'OS 2';
+
+3. Filter the rows returned from department column in the employees table to include only employees from the 'Finance' department.
+- select * from employees where department = 'Finance';
+
+4. Modify the previous query so that it returns employees who are in the 'Sales' department.
+- select * from employees where department = 'Sales';
+
+5. Write a query to identify which employee uses the office in 'South-109'. (The data must be returned from the office column in the employees table.)
+- select * from employees where office = 'South-109';
+
+6. Modify the query you used in the previous step so that it returns information on all the employees in the 'South' building. Use the LIKE operator with % in this query.
+- select * from employees where office like 'South%';
