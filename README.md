@@ -1,5 +1,7 @@
 # Google Cybersecurity Professional Certificate
 Certificate of completion for Google Cybersecurity Professional Certificate for Rosaline Annarine Boother
+<img width="908" height="698" alt="image" src="https://github.com/user-attachments/assets/61b20d20-529c-437d-bbae-879558bebff4" />
+
 
 This repo holds all of the projects, notes, and write-ups I have done while completing the Google Cybersecurity Professional Certificate.
 
