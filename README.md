@@ -5,7 +5,7 @@ Certificate of completion for Google Cybersecurity Professional Certificate for 
 
 This repo holds all of the projects, notes, and write-ups I have done while completing the Google Cybersecurity Professional Certificate.
 
-You can view my certificate of completion on Credly or Coursera.
+You can view my certificate of completion on [Credly](https://www.credly.com/badges/81b987d1-e47c-42ba-8539-ae94d2fa4a4b/public_url) or [Coursera](https://coursera.org/share/51a7aadc5e8924b66b04eb9cc0b775e3).
 
 In this course I gained foundational knowledge that will prepare me for entry-level jobs in cybersecurity and help me understand how security teams protect their organizations and its customers.
 
